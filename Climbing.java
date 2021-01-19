@@ -1,4 +1,8 @@
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
+import java.util.*;
 
 public class Climbing {
     public static void main(String[] args) {
@@ -15,7 +19,16 @@ public class Climbing {
         {
             alice[i]=scan.nextInt();
         }
+        int []res=new int[m];
+        climbing(scores,alice);
+
 
         scan.close();
+    }
+
+    public static void climbing(int[] scores,int[] chacha){
+        List<Integer> scoresList=Arrays.asList(scores);
+        Set<Integer> set = new HashSet<>(scoresList);
+        System.out.println(set);
     }
 }
